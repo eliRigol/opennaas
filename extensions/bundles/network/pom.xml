@@ -26,6 +26,10 @@
 	  <groupId>org.opennaas</groupId>
 	  <artifactId>org.opennaas.extensions.router.model</artifactId>
 	</dependency>
+	<dependency>
+	  <groupId>org.opennaas</groupId>
+	  <artifactId>org.opennaas.extensions.network.repository</artifactId>
+	</dependency>		
   </dependencies>
   <build>
 	<plugins>
@@ -43,19 +47,21 @@
 		-->
 		<configuration>
 			<instructions>
-				<Bundle-Activator>org.opennaas.extensions.network.capability.ospf.Activator</Bundle-Activator>
+				<Bundle-Activator>org.opennaas.extensions.network.activator.Activator</Bundle-Activator>
 				<!--
 					| assume public classes are in the top package, and private
 					classes are under ".internal"
 				-->
 				<Import-Package>
-					!opennaas.extension.network.capability.ospf.*,
+					!org.opennaas.extension.network.capability.ospf.*,
+					!org.opennaas.extensions.network.capability.basic.*,
   					org.slf4j,
 					org.apache.felix.service.command,
 					*
 					</Import-Package>
 				<Export-Package>
-					org.opennaas.extensions.network.capability.ospf;version="${project.version}"
+					org.opennaas.extensions.network.capability.ospf;version="${project.version}",
+					org.opennaas.extensions.network.capability.basic;version="${project.version}"					
 				</Export-Package>
 			</instructions>
 		  </configuration>

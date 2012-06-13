@@ -1,4 +1,5 @@
-package org.opennaas.extensions.network.capability.ospf;
+package org.opennaas.extensions.network.activator;
+
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

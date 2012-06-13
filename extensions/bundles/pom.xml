@@ -44,7 +44,6 @@
 
 		<module>network.model</module>
 		<module>network.repository</module>
-		<module>network.capability.basic</module>
 		<module>network.capability.queue</module>
 		<module>network</module>
 

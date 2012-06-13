@@ -50,4 +50,55 @@
 			</completers>
 		</command>		
 	</command-bundle>
+	
+	<!-- Factory that creates protocol capabilities -->
+	<bean id="networkBasicCapabilityFactory" class="org.opennaas.extensions.network.capability.basic.NetworkBasicCapabilityFactory">
+		<property name="type" value="basicNetwork"/>
+	</bean>
+	<!-- Register the Service as an OSGi Service -->
+	<service ref="networkBasicCapabilityFactory" interface="org.opennaas.core.resources.capability.ICapabilityFactory">
+		<service-properties>
+			<!--  TODO it is necessary to use two parameters to get capability -->
+			<entry key="capability" value="basicNetwork"/>
+		</service-properties>
+	</service>
+	<!-- Provide commands to the Karaf shell -->
+	<command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.0.0">
+		<command name="net/listResources">
+			<action class="org.opennaas.extensions.network.capability.basic.shell.ListResourcesCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="net/addResource">
+			<action class="org.opennaas.extensions.network.capability.basic.shell.AddResourceToNetworkCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="net/removeResource">
+			<action class="org.opennaas.extensions.network.capability.basic.shell.RemoveResourceFromNetworkCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="net/l2attach">
+			<action class="org.opennaas.extensions.network.capability.basic.shell.L2AttachCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="net/l2detach">
+			<action class="org.opennaas.extensions.network.capability.basic.shell.L2DetachCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+	</command-bundle>	
+	
 </blueprint>
