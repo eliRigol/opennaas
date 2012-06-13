@@ -110,7 +110,7 @@
 	<feature name="opennaas-network" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
 
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.repository/${project.version}</bundle>
+		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.repository/${project.version}</bundle> -->
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.basic/${project.version}</bundle>-->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.queue/${project.version}</bundle>
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.ospf/${project.version}</bundle> -->
