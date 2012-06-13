@@ -60,7 +60,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.opennaas</groupId>
-			<artifactId>org.opennaas.extensions.network.capability.ospf</artifactId>
+			<artifactId>org.opennaas.extensions.network</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.opennaas</groupId>

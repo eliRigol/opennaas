@@ -46,7 +46,7 @@
 		<module>network.repository</module>
 		<module>network.capability.basic</module>
 		<module>network.capability.queue</module>
-		<module>network.capability.ospf</module>
+		<module>network</module>
 
 		<module>bod.repository</module>
 		<module>bod.capability.l2bod</module>

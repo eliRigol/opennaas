@@ -113,7 +113,9 @@
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.repository/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.basic/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.queue/${project.version}</bundle>
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.ospf/${project.version}</bundle>
+		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.ospf/${project.version}</bundle> -->
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.network/${project.version}</bundle>
+		
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.ospf/${project.version}</bundle>
 	</feature>
 
