@@ -76,4 +76,26 @@
 		</command>
 	</command-bundle>
 
+<!-- BoD Actionset -->
+	<!--  	publish action set services  -->
+	<bean id="BoDActionSet" class="org.opennaas.extensions.bod.actionsets.dummy.BoDActionSet"/>
+	<!-- Register an BoD action factory as an OSGi Service -->
+	<!--  	publish action set services  -->
+	<service ref="BoDActionSet" interface="org.opennaas.core.resources.action.IActionSet">
+		<service-properties>
+			<entry key="actionset.name" value="dummy"/>
+			<entry key="actionset.capability" value="l2bod"/>
+			<entry key="actionset.version" value="1.0"/>
+		</service-properties>
+	</service>
+	<bean id="queueActionSet" class="org.opennaas.extensions.bod.actionsets.dummy.QueueActionSet"/>
+	<!-- Register an Junos action factory as an OSGi Service -->
+	<service ref="queueActionSet" interface="org.opennaas.core.resources.action.IActionSet">
+		<service-properties>
+			<entry key="actionset.name" value="dummy"/>
+			<entry key="actionset.capability" value="queue"/>
+			<entry key="actionset.version" value="1.0"/>
+		</service-properties>
+	</service>
+
 </blueprint>

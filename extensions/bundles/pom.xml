@@ -46,7 +46,6 @@
 		<module>network</module>
 
 		<module>bod</module>
-		<module>bod.actionsets.dummy</module>
         <module>bod.autobahn</module>
          
 		<module>itests.helpers</module>
