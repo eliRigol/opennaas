@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+
+<!-- BoD Repository -->
 	<!-- Build the bootstrapper -->
 	<bean id="bodBootstrapperFactory" class="org.opennaas.extensions.bod.repository.BoDBootstrapperFactory"/>
     <bean id="resourceDescriptorRepository"
@@ -25,4 +27,6 @@
 	
 	<!-- Forces this bundle to wait for dataSourceResources being published -->
 	<reference id="dataSourceResources" interface="javax.sql.DataSource" filter="(osgi.jndi.service.name=jdbc/opennaas-resources)"/>	
+
+
 </blueprint>

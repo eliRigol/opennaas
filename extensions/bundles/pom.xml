@@ -45,7 +45,7 @@
 		<module>network.capability.queue</module>
 		<module>network</module>
 
-		<module>bod.repository</module>
+		<module>bod</module>
 		<module>bod.capability.l2bod</module>
 		<module>bod.actionsets.dummy</module>
         <module>bod.autobahn</module>

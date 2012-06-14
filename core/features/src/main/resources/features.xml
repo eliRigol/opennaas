@@ -125,7 +125,8 @@
 		<bundle dependency="true">mvn:joda-time/joda-time/${jodatime.version}</bundle>
 		<bundle dependency="true">mvn:com.googlecode.guava-osgi/guava-osgi/${guava.version}</bundle>
 
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.repository/${project.version}</bundle>
+	<!--<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.repository/${project.version}</bundle> -->
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.bod/${project.version}</bundle>	
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.capability.l2bod/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.actionsets.dummy/${project.version}</bundle>
 	</feature>
