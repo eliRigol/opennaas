@@ -24,7 +24,7 @@
 	</dependency>
 	<dependency>
 	  <groupId>org.opennaas</groupId>
-	  <artifactId>org.opennaas.extensions.network.repository</artifactId>
+	  <artifactId>org.opennaas.extensions.queuemanager</artifactId>
 	</dependency>		
   </dependencies>
   <build>

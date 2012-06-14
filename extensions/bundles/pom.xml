@@ -42,7 +42,6 @@
 		<module>roadm.capability.connections</module>
 		<module>roadm.capability.monitoring</module>
 
-		<module>network.repository</module>
 		<module>network.capability.queue</module>
 		<module>network</module>
 
