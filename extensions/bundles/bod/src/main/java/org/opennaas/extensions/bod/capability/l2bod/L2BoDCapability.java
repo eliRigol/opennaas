@@ -11,6 +11,7 @@ import org.opennaas.core.resources.capability.AbstractCapability;
 import org.opennaas.core.resources.capability.CapabilityException;
 import org.opennaas.core.resources.descriptor.CapabilityDescriptor;
 import org.opennaas.core.resources.descriptor.ResourceDescriptorConstants;
+import org.opennaas.extensions.bod.activator.Activator;
 import org.opennaas.extensions.network.model.topology.Interface;
 import org.opennaas.extensions.queuemanager.IQueueManagerCapability;
 

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
 
+	<!-- Command completers -->
+	<reference id="resourceNameCompleter" interface="org.apache.karaf.shell.console.Completer" filter="(completer.name=resourceNameCompleter)"/>
+
 <!-- BoD Repository -->
 	<!-- Build the bootstrapper -->
 	<bean id="bodBootstrapperFactory" class="org.opennaas.extensions.bod.repository.BoDBootstrapperFactory"/>
@@ -25,8 +28,52 @@
 		</service-properties>
 	</service>
 	
+<!-- L2BoD Capability -->	
 	<!-- Forces this bundle to wait for dataSourceResources being published -->
 	<reference id="dataSourceResources" interface="javax.sql.DataSource" filter="(osgi.jndi.service.name=jdbc/opennaas-resources)"/>	
-
+	<!-- Factory that creates protocol capabilities -->
+	<bean id="l2bodCapabilityFactory" class="org.opennaas.extensions.bod.capability.l2bod.L2BoDCapabilityFactory">
+		<property name="type" value="l2bod"/>
+	</bean>
+	<!-- Register the Service as an OSGi Service -->
+	<service ref="l2bodCapabilityFactory" interface="org.opennaas.core.resources.capability.ICapabilityFactory">
+		<service-properties>
+			<!--  TODO it is necessary to use two parameters to get capability -->
+			<entry key="capability" value="l2bod"/>
+			<entry key="capability.model" value="dummy"/>
+			<entry key="capability.version" value="1.0"/>
+		</service-properties>
+	</service>
+	<!-- Provide commands to the Karaf shell -->
+	<command-bundle xmlns="http://karaf.apache.org/xmlns/shell/v1.0.0">
+		<command name="l2bod/requestConnection">
+			<action class="org.opennaas.extensions.bod.capability.l2bod.shell.RequestConnectionCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="l2bod/shutdownConnection">
+			<action class="org.opennaas.extensions.bod.capability.l2bod.shell.ShutdownConnectionCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="l2bod/interfaces">
+			<action class="org.opennaas.extensions.bod.capability.l2bod.shell.InterfacesCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+		<command name="l2bod/links">
+			<action class="org.opennaas.extensions.bod.capability.l2bod.shell.LinksCommand"/>
+			<completers>
+				<ref component-id="resourceNameCompleter"/>
+				<null/>
+			</completers>
+		</command>
+	</command-bundle>
 
 </blueprint>

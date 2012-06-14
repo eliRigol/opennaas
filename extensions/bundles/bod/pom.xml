@@ -22,6 +22,22 @@
 	  <groupId>org.opennaas</groupId>
 	  <artifactId>org.opennaas.extensions.queuemanager</artifactId>
 	</dependency>
+	<dependency>
+	  <groupId>org.opennaas</groupId>
+	  <artifactId>org.opennaas.extensions.network.model</artifactId>
+	</dependency>	
+	<dependency>
+	  <groupId>com.googlecode.guava-osgi</groupId>
+	  <artifactId>guava-osgi</artifactId>
+	</dependency>
+	<dependency>
+	  <groupId>org.apache.karaf.shell</groupId>
+	  <artifactId>org.apache.karaf.shell.console</artifactId>
+	</dependency>
+	<dependency>
+	  <groupId>joda-time</groupId>
+	  <artifactId>joda-time</artifactId>
+	</dependency>	
    </dependencies>  
 	<build>
 		<plugins>
@@ -39,10 +55,15 @@
 				-->
 				<configuration>
 					<instructions>
+						<Bundle-Activator>org.opennaas.extensions.bod.activator.Activator</Bundle-Activator>
 						<Import-Package>
-							org.slf4j,
+  							org.slf4j,
+							org.apache.felix.service.command, <!--  necessary to do karaf commands -->
 							*
 						</Import-Package>
+						<Export-Package>
+							org.opennaas.extensions.bod.capability.l2bod;version="${project.version}"
+						</Export-Package>						
 					</instructions>
 				</configuration>
 			</plugin>

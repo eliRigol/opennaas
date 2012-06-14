@@ -1,4 +1,4 @@
-package org.opennaas.extensions.bod.capability.l2bod;
+package org.opennaas.extensions.bod.activator;
 
 import java.util.Properties;
 
