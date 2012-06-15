@@ -2,14 +2,17 @@ package org.opennaas.extensions.roadm.activator;
 
 import java.util.Properties;
 
-import org.opennaas.extensions.queuemanager.IQueueManagerCapability;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.opennaas.core.events.IEventManager;
 import org.opennaas.core.resources.AbstractActivator;
 import org.opennaas.core.resources.ActivatorException;
 import org.opennaas.core.resources.action.IActionSet;
+import org.opennaas.core.resources.alarms.IAlarmsRepository;
 import org.opennaas.core.resources.descriptor.ResourceDescriptorConstants;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.opennaas.core.resources.protocol.IProtocolManager;
+import org.opennaas.extensions.queuemanager.IQueueManagerCapability;
+import org.opennaas.extensions.roadm.capability.monitoring.MonitoringCapability;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Filter;
@@ -74,7 +77,6 @@ public class Activator extends AbstractActivator implements BundleActivator {
 		return createServiceFilter(IActionSet.class.getName(), properties);
 	}
 
-
 	public static IActionSet getMonitoringActionSetService(String name, String version) throws ActivatorException {
 		try {
 			log.debug("Calling ConnectionsActionSetService");
@@ -111,5 +113,4 @@ public class Activator extends AbstractActivator implements BundleActivator {
 		return (IProtocolManager) getServiceFromRegistry(context, IProtocolManager.class.getName());
 	}
 
-	
 }

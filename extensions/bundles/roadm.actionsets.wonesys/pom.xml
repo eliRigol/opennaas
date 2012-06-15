@@ -34,7 +34,7 @@
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.roadm</artifactId>			
 		</dependency>
-git 	</dependencies>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>

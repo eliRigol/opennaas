@@ -24,6 +24,7 @@ import org.opennaas.core.resources.command.Response;
 import org.opennaas.core.resources.descriptor.CapabilityDescriptor;
 import org.opennaas.core.resources.descriptor.ResourceDescriptorConstants;
 import org.opennaas.extensions.queuemanager.IQueueManagerCapability;
+import org.opennaas.extensions.roadm.activator.Activator;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventHandler;
 

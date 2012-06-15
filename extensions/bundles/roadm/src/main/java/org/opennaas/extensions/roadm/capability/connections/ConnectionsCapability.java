@@ -10,6 +10,7 @@ import org.opennaas.core.resources.capability.CapabilityException;
 import org.opennaas.core.resources.descriptor.CapabilityDescriptor;
 import org.opennaas.core.resources.descriptor.ResourceDescriptorConstants;
 import org.opennaas.extensions.queuemanager.IQueueManagerCapability;
+import org.opennaas.extensions.roadm.activator.Activator;
 import org.opennaas.extensions.router.model.opticalSwitch.FiberConnection;
 
 public class ConnectionsCapability extends AbstractCapability implements IConnectionsCapability {
