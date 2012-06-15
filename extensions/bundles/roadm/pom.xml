@@ -14,7 +14,7 @@
 	<name>OpenNaaS :: ROADM</name>
 	<description>Roadm Capabilities Implementation</description>
 	<dependencies>
-		<!-- capability connection -->
+		<!-- connections capability and  monitoring capability dependencies-->
 		<dependency>
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.router.model</artifactId>
@@ -27,6 +27,8 @@
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.queuemanager</artifactId>
 		</dependency>
+		
+
 		<!--  auxiliar methods to use with commands -->
 		<dependency>
 			<groupId>org.apache.karaf.shell</groupId>
@@ -49,18 +51,19 @@
 				-->
 				<configuration>
 					<instructions>
-						<Bundle-Activator>org.opennaas.extensions.roadm.capability.connections.Activator</Bundle-Activator>
+						<Bundle-Activator>org.opennaas.extensions.roadm.activator.Activator </Bundle-Activator>
 						<!--
 							| assume public classes are in the top package, and private
 							classes are under ".internal"
 						-->
-						<Import-Package>
+						<Import-Package>!org.opennaas.extensions.roadm.capability.monitoring.*,
   							org.slf4j,
 							org.apache.felix.service.command, <!--  necessary to do karaf commands -->
 							*
 							</Import-Package>
 						<Export-Package>
-							org.opennaas.extensions.roadm.capability.connections;version="${project.version}"
+							org.opennaas.extensions.roadm.capability.connections;version="${project.version}",
+							org.opennaas.extensions.roadm.capability.monitoring;version="${project.version}"
 						</Export-Package>
 					</instructions>
 				</configuration>

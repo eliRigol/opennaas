@@ -164,11 +164,6 @@
 			</dependency>
 			<dependency>
 				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.extensions.roadm.capability.monitoring</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opennaas</groupId>
 				<artifactId>org.opennaas.extensions.roadm.repository</artifactId>
 				<version>${project.version}</version>
 			</dependency>

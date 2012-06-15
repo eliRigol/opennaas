@@ -148,8 +148,6 @@
 	<feature name="opennaas-luminis" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
 
-		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.capability.connections/${project.version}</bundle> -->
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.capability.monitoring/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.repository/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm/${project.version}</bundle>
 	

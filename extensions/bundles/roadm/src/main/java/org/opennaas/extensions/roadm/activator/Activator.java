@@ -1,4 +1,4 @@
-package org.opennaas.extensions.roadm.capability.connections;
+package org.opennaas.extensions.roadm.activator;
 
 import java.util.Properties;
 
@@ -74,4 +74,42 @@ public class Activator extends AbstractActivator implements BundleActivator {
 		return createServiceFilter(IActionSet.class.getName(), properties);
 	}
 
+
+	public static IActionSet getMonitoringActionSetService(String name, String version) throws ActivatorException {
+		try {
+			log.debug("Calling ConnectionsActionSetService");
+			return (IActionSet) getServiceFromRegistry(context, createFilterMonitoringActionSet(name, version));
+		} catch (InvalidSyntaxException e) {
+			throw new ActivatorException(e);
+		}
+	}
+
+	public static IAlarmsRepository getAlarmsRepositoryService() throws ActivatorException {
+		log.debug("Calling AlarmsManagerService");
+		return (IAlarmsRepository) getServiceFromRegistry(context, IAlarmsRepository.class.getName());
+	}
+
+	/*
+	 * necessary to get some capability type
+	 */
+	private static Filter createFilterMonitoringActionSet(String name, String version) throws InvalidSyntaxException {
+		Properties properties = new Properties();
+		properties.setProperty(ResourceDescriptorConstants.ACTION_CAPABILITY, MonitoringCapability.CAPABILITY_NAME);
+		properties.setProperty(ResourceDescriptorConstants.ACTION_NAME, name);
+		properties.setProperty(ResourceDescriptorConstants.ACTION_VERSION, version);
+		return createServiceFilter(IActionSet.class.getName(), properties);
+	}
+
+	public static IEventManager getEventManagerService() throws ActivatorException {
+		log.debug("Calling EventManager");
+		// log.debug("Params: context=" + context + " class=" + IEventManager.class.getName());
+		return (IEventManager) getServiceFromRegistry(context, IEventManager.class.getName());
+	}
+
+	public static IProtocolManager getProtocolManagerService(String resourceId) throws ActivatorException {
+		log.debug("Calling ProtocolManager");
+		return (IProtocolManager) getServiceFromRegistry(context, IProtocolManager.class.getName());
+	}
+
+	
 }
