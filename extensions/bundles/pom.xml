@@ -39,8 +39,10 @@
 		<module>roadm.repository</module>
 		<module>roadm.protocols.wonesys</module>
 		<module>roadm.actionsets.wonesys</module>
-		<module>roadm.capability.connections</module>
+		<!--  <module>roadm.capability.connections</module> -->
 		<module>roadm.capability.monitoring</module>
+		<module>roadm</module>
+		
 
 		<module>network.capability.queue</module>
 		<module>network</module>
@@ -53,5 +55,6 @@
 		<module>webservice</module>
 		
         <module>sampleresource</module>
+        <module>zz</module>
 	</modules>
 </project>
