@@ -45,7 +45,8 @@
 
 		<!-- The core model unfortunately depends on the network model
 		     - it should be the other way around. -->
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.model/${project.version}</bundle>
+		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.model/${project.version}</bundle> Bundle collapse-->
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.network/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.router.model/${project.version}</bundle>
 
 		<!-- QueueManager should probably be part of org.opennaas.core,
@@ -148,7 +149,7 @@
 	<feature name="opennaas-luminis" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
 
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.repository/${project.version}</bundle>
+		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.repository/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm/${project.version}</bundle>
 	
 	</feature>

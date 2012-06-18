@@ -12,9 +12,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>bundle</packaging>
 	<name>OpenNaaS :: ROADM</name>
-	<description>Roadm Capabilities Implementation</description>
+	<description>Roadm (Capabilities and Repository) Implementation</description>
 	<dependencies>
-		<!-- connections capability and  monitoring capability dependencies-->
+		<!-- connections capability, monitoring capability and repository dependencies-->
 		<dependency>
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.router.model</artifactId>
@@ -27,13 +27,13 @@
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.queuemanager</artifactId>
 		</dependency>
-		
 
 		<!--  auxiliar methods to use with commands -->
 		<dependency>
 			<groupId>org.apache.karaf.shell</groupId>
 			<artifactId>org.apache.karaf.shell.console</artifactId>
 		</dependency>
+				
 	</dependencies>
 	<build>
 		<plugins>

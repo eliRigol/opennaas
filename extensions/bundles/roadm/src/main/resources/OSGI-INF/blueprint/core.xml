@@ -103,4 +103,46 @@
 			</completers> 
 		</command>
 	</command-bundle>
+	
+	<!-- Roadm Repository bean ids and services ...Start-->
+	<!-- Build the bootstrapper -->
+	<bean id="roadmBootstrapperFactory" class="org.opennaas.extensions.roadm.repository.ROADMBootstrapperFactory"/>
+	<!-- Get capability factories from the OSGi registry -->
+	<!--
+		<reference-list id="capabilityFactory"
+		interface="org.opennaas.core.resources.capability.ICapabilityFactory"
+		availability="mandatory"> <reference-listener
+		ref="mantychoreRepository" bind-method="capabilityFactoryAdded"
+		unbind-method="capabilityFactoryDeleted" /> </reference-list>
+	-->
+	<reference id="queueCapabilityFactory" interface="org.opennaas.core.resources.capability.ICapabilityFactory" filter="(&amp;(capability=queue)(capability.model=junos))"/>
+	
+    <bean id="resourceDescriptorRepository"
+          class="org.opennaas.core.resources.descriptor.ResourceDescriptorRepository"
+          init-method="initializeEntityManager" destroy-method="close">
+         <property name="persistenceUnit" value="ResourceCore"/>
+    </bean>
+	<bean id="ROADMRepository" class="org.opennaas.extensions.roadm.repository.ROADMRepository" init-method="init">
+		<argument value="roadm"/>
+		<!-- resourceType -->
+		<property name="capabilityFactories">
+			<map>
+				<entry key="queue" value-ref="queueCapabilityFactory"/>
+				<entry key="connections" value-ref="connectionsCapabilityFactory"/>
+				<entry key="monitoring" value-ref="monitoringCapabilityFactory"/>
+			</map>
+		</property>
+		<property name="resourceBootstrapperFactory" ref="roadmBootstrapperFactory"/>
+		<property name="resourceDescriptorRepository" ref="resourceDescriptorRepository"/>
+	</bean>
+	<service ref="ROADMRepository" interface="org.opennaas.core.resources.IResourceRepository">
+		<service-properties>
+			<entry key="type" value="roadm"/>
+			<entry key="version" value="1.0"/>
+		</service-properties>
+	</service>
+	<!-- Forces this bundle to wait for dataSourceResources being published -->
+	<reference id="dataSourceResources" interface="javax.sql.DataSource" filter="(osgi.jndi.service.name=jdbc/opennaas-resources)"/>
+	<!-- Roadm Repository bean ids and services ...End-->
+	
 </blueprint>
