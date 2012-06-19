@@ -159,8 +159,10 @@
 
 		<bundle dependency="true">mvn:com.wonesys/org.opennaas.extensions.com.wonesys.emsModule/${project.version}</bundle>
 
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.protocols.wonesys/${project.version}</bundle>
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.actionsets.wonesys/${project.version}</bundle>
+		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.protocols.wonesys/${project.version}</bundle>  -->	
+		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.actionsets.wonesys/${project.version}</bundle> -->
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.wonesys/${project.version}</bundle>
+	
 	</feature>
 
 	<feature name="opennaas" version="${project.version}">

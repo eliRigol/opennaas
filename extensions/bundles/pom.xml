@@ -35,9 +35,7 @@
 		<module>protocols.netconf</module>
 		<module>queuemanager</module>
 		<module>com.wonesys.emsModule</module>
-
-		<module>roadm.protocols.wonesys</module>
-		<module>roadm.actionsets.wonesys</module>
+		<module>roadm.wonesys</module>
 		<module>roadm</module>
 		
 

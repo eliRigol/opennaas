@@ -149,22 +149,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.extensions.roadm.protocols.wonesys</artifactId>
+				<artifactId>org.opennaas.extensions.roadm.wonesys</artifactId>
 				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.extensions.roadm.actionsets.wonesys</artifactId>
-				<version>${project.version}</version>
-			</dependency>
+			</dependency>		
 			<dependency>
 				<groupId>org.opennaas</groupId>
 				<artifactId>org.opennaas.extensions.roadm</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.opennaas</groupId>
-				<artifactId>org.opennaas.extensions.roadm.repository</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>

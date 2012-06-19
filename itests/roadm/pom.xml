@@ -20,21 +20,14 @@
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.queuemanager</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.opennaas</groupId>
-			<artifactId>org.opennaas.extensions.roadm.repository</artifactId>
-		</dependency>
+		<!--  <artifactId>org.opennaas.extensions.roadm.repository</artifactId> -->
 		<dependency>
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.roadm</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.opennaas</groupId>
-			<artifactId>org.opennaas.extensions.roadm.actionsets.wonesys</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.opennaas</groupId>
-			<artifactId>org.opennaas.extensions.roadm.protocols.wonesys</artifactId>
+			<artifactId>org.opennaas.extensions.roadm.wonesys</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>com.wonesys</groupId>
