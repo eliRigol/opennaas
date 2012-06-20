@@ -244,6 +244,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.opennaas</groupId>
+				<artifactId>org.opennaas.extensions.router</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.opennaas</groupId>
 				<artifactId>org.opennaas.extensions.itests.helpers</artifactId>
 				<version>${project.version}</version>
 			</dependency>
