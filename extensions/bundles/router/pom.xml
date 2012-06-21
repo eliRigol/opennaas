@@ -17,7 +17,7 @@
 			org.opennaas.extensions.router.capability.ospf         ..done(added)
 			org.opennaas.extensions.router.capability.staticroute  ..done(added)
 			org.opennaas.extensions.router.repository
-			org.opennaas.extensions.router.model
+	
 	 -->
 	 
 	<!--  POM id --> 
@@ -99,7 +99,8 @@
 			 			    org.opennaas.extensions.router.capability.gretunnel;version="${project.version}",
 			 			    org.opennaas.extensions.router.capability.ip;version="${project.version}",
 			 			    org.opennaas.extensions.router.capability.ospf;version="${project.version}",
-			 			    org.opennaas.extensions.router.capability.staticroute;version="${project.version}"
+			 			    org.opennaas.extensions.router.capability.staticroute;version="${project.version}",
+			 			    org.opennaas.extensions.router.repository.*;version="${project.version}"
 							
 						</Export-Package>
 					</instructions>
