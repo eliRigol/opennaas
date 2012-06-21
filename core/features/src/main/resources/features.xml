@@ -45,8 +45,7 @@
 
 		<!-- The core model unfortunately depends on the network model
 		     - it should be the other way around. -->
-		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.model/${project.version}</bundle> Bundle collapse-->
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.network/${project.version}</bundle>
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.model/${project.version}</bundle>
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.router.model/${project.version}</bundle>
 
 		<!-- QueueManager should probably be part of org.opennaas.core,
@@ -99,13 +98,6 @@
 
 	<feature name="opennaas-router" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
-
-		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.router.repository/${project.version}</bundle> -->
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.chassis/${project.version}</bundle>-->
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.ip/${project.version}</bundle>-->
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.gretunnel/${project.version}</bundle>-->
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.ospf/${project.version}</bundle>-->
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.staticroute/${project.version}</bundle>-->		
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.router/${project.version}</bundle>	
 
 	</feature>
@@ -115,9 +107,9 @@
 
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.repository/${project.version}</bundle> -->
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.basic/${project.version}</bundle>-->
-		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.queue/${project.version}</bundle>
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.ospf/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.network/${project.version}</bundle>
+		<bundle>mvn:org.opennaas/org.opennaas.extensions.network.capability.queue/${project.version}</bundle>
 		
 		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.router.capability.ospf/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.router/${project.version}</bundle>	
@@ -130,13 +122,10 @@
 		<bundle dependency="true">mvn:joda-time/joda-time/${jodatime.version}</bundle>
 		<bundle dependency="true">mvn:com.googlecode.guava-osgi/guava-osgi/${guava.version}</bundle>
 
-	<!--<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.repository/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.bod/${project.version}</bundle>	
-	<!--  	<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.capability.l2bod/${project.version}</bundle> -->
-	<!-- 	<bundle>mvn:org.opennaas/org.opennaas.extensions.bod.actionsets.dummy/${project.version}</bundle>  -->
 	</feature>
 	
-		<feature name="opennaas-sampleresource" version="${project.version}">
+	<feature name="opennaas-sampleresource" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
 
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.sampleresource/${project.version}</bundle>
@@ -153,7 +142,6 @@
 	<feature name="opennaas-luminis" version="${project.version}">
 		<feature version="${project.version}">opennaas-cim</feature>
 
-		<!--  <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.repository/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm/${project.version}</bundle>
 	
 	</feature>
@@ -163,8 +151,6 @@
 
 		<bundle dependency="true">mvn:com.wonesys/org.opennaas.extensions.com.wonesys.emsModule/${project.version}</bundle>
 
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.protocols.wonesys/${project.version}</bundle>  -->	
-		<!-- <bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.actionsets.wonesys/${project.version}</bundle> -->
 		<bundle>mvn:org.opennaas/org.opennaas.extensions.roadm.wonesys/${project.version}</bundle>
 	
 	</feature>

@@ -14,7 +14,7 @@
   <dependencies>
       <dependency>
 		  <groupId>org.opennaas</groupId>
-		  <artifactId>org.opennaas.extensions.bod.capability.l2bod</artifactId>
+		  <artifactId>org.opennaas.extensions.bod</artifactId>
       </dependency>
       <dependency>
           <groupId>com.googlecode.guava-osgi</groupId>

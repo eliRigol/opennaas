@@ -20,7 +20,6 @@
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.queuemanager</artifactId>
 		</dependency>
-		<!--  <artifactId>org.opennaas.extensions.roadm.repository</artifactId> -->
 		<dependency>
 			<groupId>org.opennaas</groupId>
 			<artifactId>org.opennaas.extensions.roadm</artifactId>

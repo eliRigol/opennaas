@@ -23,17 +23,8 @@
 	</dependencies>
 	<modules>
 		<module>router.actionsets.junos</module>
-		<!--<module>router.repository</module> -->
-		<!--<module>router.capability.chassis</module>
-			<module>router.capability.ip</module>
-			<module>router.capability.gretunnel</module>
-			<module>router.capability.ospf</module>
-			<module>router.capability.staticroute</module>
-		-->
 		<module>router.model</module>
-		
 		<module>router</module>
-		
 
 		<module>fragment.velocity</module>
 		<module>protocols.netconf</module>
@@ -44,6 +35,7 @@
 		
 
 		<module>network.capability.queue</module>
+		<module>network.model</module>
 		<module>network</module>
 
 		<module>bod</module>

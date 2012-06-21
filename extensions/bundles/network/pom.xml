@@ -10,11 +10,11 @@
   <name>OpenNaaS :: Network Resource</name>
   <description>Network Repository and Capabilities Implementation</description>
   <dependencies> 
-  	<dependency>
+   	<dependency>
 	  <groupId>org.opennaas</groupId>
-	  <artifactId>org.opennaas.extensions.router.capability.ospf</artifactId>
+	  <artifactId>org.opennaas.extensions.router</artifactId>
 	</dependency>  
-	<dependency>
+ 	<dependency>
 	  <groupId>org.opennaas</groupId>
 	  <artifactId>org.opennaas.core.resources</artifactId>
 	</dependency>
@@ -25,23 +25,15 @@
 	<dependency>
 	  <groupId>org.opennaas</groupId>
 	  <artifactId>org.opennaas.extensions.queuemanager</artifactId>
-	</dependency>		
+	</dependency>	
+	<dependency>
+	  <groupId>org.opennaas</groupId>
+	  <artifactId>org.opennaas.extensions.network.model</artifactId>
+	</dependency>
+	
   </dependencies>
   <build>
 	<plugins>
-	  <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-source-plugin</artifactId>
-		<executions>
-		  <execution>
-			<id>attach-sources</id>
-			<phase>verify</phase>
-			<goals>
-			  <goal>jar-no-fork</goal>
-			</goals>
-		  </execution>
-	  	</executions>
-	  </plugin>	
   	  <plugin>
 		<groupId>org.ops4j</groupId>
 		<artifactId>maven-pax-plugin</artifactId>
@@ -62,7 +54,6 @@
 					classes are under ".internal"
 				-->
 				<Import-Package>
-					!org.opennaas.extensions.network.model.*,
 					!org.opennaas.extension.network.capability.ospf.*,
 					!org.opennaas.extensions.network.capability.basic.*,
   					org.slf4j,
@@ -71,9 +62,7 @@
 					</Import-Package>
 				<Export-Package>
 					org.opennaas.extensions.network.capability.ospf;version="${project.version}",
-					org.opennaas.extensions.network.capability.basic;version="${project.version}",
-					org.opennaas.extensions.network.model;version="${project.version}",
-					org.opennaas.extensions.network.model.*;version="${project.version}"
+					org.opennaas.extensions.network.capability.basic;version="${project.version}"
 				</Export-Package>
 			</instructions>
 		  </configuration>
