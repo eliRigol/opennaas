@@ -72,7 +72,7 @@ public class MantychoreRepositoryIntegrationTest
 	private IProtocolManager	protocolManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.chassis)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
 	private BlueprintContainer	chassisService;
 
 	@Configuration

@@ -63,12 +63,12 @@ public class NetOSPFIntegrationTest {
 	private IResourceManager		resourceManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.network.repository)")
-	private BlueprintContainer		networkRepoService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.network)")
+	private BlueprintContainer		networkService;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer		routerRepoService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer		routerService;
 
 	private IResource				networkResource;
 

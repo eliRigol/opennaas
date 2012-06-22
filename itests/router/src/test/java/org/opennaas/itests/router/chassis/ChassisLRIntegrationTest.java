@@ -84,12 +84,8 @@ public class ChassisLRIntegrationTest
 	private String				interfaceName		= "fe-0/0/3.1";
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer	routerRepoService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.ip)")
-	private BlueprintContainer	ipService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer	routerService;
 
 	@Inject
 	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.queuemanager)")

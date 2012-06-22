@@ -48,8 +48,8 @@ public class ProtocolSessionManagerTest {
 	private IProtocolManager		protocolManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer		routerRepositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer		routerService;
 
 	// @Inject
 	// @Filter("(osgi.blueprint.container.symbolicname=org.opennaas.core.protocols-sessionmanager)")
@@ -59,9 +59,6 @@ public class ProtocolSessionManagerTest {
 	// @Filter("(osgi.blueprint.container.symbolicname=org.opennaas.core.resources)")
 	// private BlueprintContainer resourceManagerService;
 
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.chassis)")
-	private BlueprintContainer		chasisService;
 
 	private ResourceDescriptor		resourceDescriptor;
 	private ProtocolSessionContext	sessionContext;

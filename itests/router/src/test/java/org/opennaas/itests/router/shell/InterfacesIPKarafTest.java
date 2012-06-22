@@ -71,16 +71,12 @@ public class InterfacesIPKarafTest
 	private BundleContext		bundleContext;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
 	private BlueprintContainer	routerService;
 
 	@Inject
 	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.queuemanager)")
 	private BlueprintContainer	queueService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.ip)")
-	private BlueprintContainer	ipService;
 
 	@ProbeBuilder
 	public TestProbeBuilder probeConfiguration(TestProbeBuilder probe) {

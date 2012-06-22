@@ -63,16 +63,9 @@ public class ResourcesWithProfileTest
 	IProtocolManager			protocolManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer	routerRepositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer	routerService;
 
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.chassis)")
-	private BlueprintContainer	chasisService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.ip)")
-	private BlueprintContainer	ipService;
 
 	@Configuration
 	public static Option[] configuration() {

@@ -87,16 +87,12 @@ public class GRETunnelCapabilityIntegrationTest {
 	private ICapabilityFactory			gretunnelFactory;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer			routerRepositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer			routerService;
 
 	@Inject
 	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.queuemanager)")
 	private BlueprintContainer			queueService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.gretunnel)")
-	private BlueprintContainer			gretunnelService;
 
 	@Inject
 	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.protocols.netconf)")

@@ -71,7 +71,7 @@ public class QueuemanagerTest
 	private ICapabilityFactory		queueManagerFactory;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
 	private BlueprintContainer		routerService;
 
 	@Inject

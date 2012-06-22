@@ -49,12 +49,8 @@ public class ResourceCommandsKarafTest extends AbstractKarafCommandTest
 	private IProtocolManager	protocolManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer	routerRepositoryService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.capability.ip)")
-	private BlueprintContainer	ipService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer	routerService;
 
 	@Inject
 	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.queuemanager)")

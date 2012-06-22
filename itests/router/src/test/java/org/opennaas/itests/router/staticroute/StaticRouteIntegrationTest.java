@@ -69,8 +69,8 @@ public class StaticRouteIntegrationTest {
 	private BlueprintContainer		netconfService;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router.repository)")
-	private BlueprintContainer		routerRepoService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.router)")
+	private BlueprintContainer		routerService;
 
 	private static final Log		log					= LogFactory
 																.getLog(StaticRouteIntegrationTest.class);

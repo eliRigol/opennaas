@@ -53,8 +53,8 @@ public class QueueIntegrationTest {
 	private IResource			networkResource;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.network.repository)")
-	private BlueprintContainer	networkRepositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.network)")
+	private BlueprintContainer	networkService;
 
 	/**
 	 * Initialize the configuration
