@@ -58,7 +58,7 @@ public class BoDIntegrationTest
 	private IResourceRepository		repository;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod.repository)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod)")
 	private BlueprintContainer		repositoryService;
 
 	private static final String		ACTION_NAME			= "dummy";

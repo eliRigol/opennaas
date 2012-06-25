@@ -84,11 +84,11 @@ public class ROADMRespositoryIntegrationTest
 	private ICapabilityFactory	connectionFactory;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.repository)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm)")
 	private BlueprintContainer	repositoryService;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.protocols.wonesys)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.wonesys)")
 	private BlueprintContainer	wonesysProtocolService;
 
 	@Configuration

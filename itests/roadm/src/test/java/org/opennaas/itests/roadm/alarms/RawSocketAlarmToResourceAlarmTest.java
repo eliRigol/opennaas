@@ -72,11 +72,11 @@ public class RawSocketAlarmToResourceAlarmTest implements EventHandler
 	private ICapabilityFactory	monitoringFactory;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.repository)")
-	private BlueprintContainer	roadmRepositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm)")
+	private BlueprintContainer	roadmService;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.protocols.wonesys)")
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.roadm.wonesys)")
 	private BlueprintContainer	wonesysProtocolService;
 
 	@Configuration

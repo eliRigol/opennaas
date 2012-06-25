@@ -59,16 +59,8 @@ public class L2BoDCapabilityIntegrationTest
 	private IResourceManager	resourceManager;
 
 	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod.actionsets.dummy)")
-	private BlueprintContainer	actionSetService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod.capability.l2bod)")
-	private BlueprintContainer	l2bodService;
-
-	@Inject
-	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod.repository)")
-	private BlueprintContainer	repositoryService;
+	@Filter("(osgi.blueprint.container.symbolicname=org.opennaas.extensions.bod)")
+	private BlueprintContainer	bodService;
 
 	private ICapability			l2bodCapability;
 
