@@ -38,13 +38,24 @@
 		<module>network.model</module>
 		<module>network</module>
 
+
 		<module>bod</module>
         <module>bod.autobahn</module>
-         
+		<!--  <module>bod.actionsets.dummy</module> add again -->
+          
 		<module>itests.helpers</module>
 		
 		<module>webservice</module>
+
+		<module>transports.sockets</module>
+		<module>transports.telnet</module>
+		<module>transports.virtual</module>
+		<module>protocols.cli</module>
+		<module>protocols.tl1</module>
+		<module>macbridge.model</module>
+		<module>macbridge.capability.vlanawarebridge</module>
+		<module>macbridge.ios.resource</module>
 		
-        <module>sampleresource</module>
+        	<module>sampleresource</module>
 	</modules>
 </project>
